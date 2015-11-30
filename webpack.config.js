@@ -20,7 +20,14 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css!sass'
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader'
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./some-folder")]
   }
 }

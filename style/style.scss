@@ -1,3 +1,108 @@
+* {
+  font-family: 'Roboto', sens-serif;
+}
+
 body {
   background-color: #E4E4E4;
+}
+
+.product {
+  &.row {
+    background-color: white;
+    border-bottom: thin solid #E4E4E4;
+    box-shadow: 2px 2px 2px #E4E4E4;
+    padding: 10px;
+  }
+
+  .title {
+    height: 50px;
+
+    .name {
+      font-size: 2em;
+      font-weight: 300;
+    }
+
+  }
+
+  .store-container {
+    width: inherit;
+    overflow: scroll;
+  }
+
+  .stores {
+    height: 90px;
+    width: 500px;
+
+    &.hidden {
+      display: hidden;
+    }
+
+    .card {
+      background-color: #E4E4E4;
+      float: left;
+      text-decoration: none;
+      margin: 5px;
+      width: 150px;
+      box-shadow: 0 0 1px rgba(0,0,0,.11),0 1px 2px rgba(0,0,0,.22);
+      box-sizing: border-box;
+    }
+
+    .card:hover {
+      box-shadow: 2px 2px 1px rgba(0,0,0,.11),0 1px 2px rgba(0,0,0,.22);
+      transition: background-color .15s cubic-bezier(.4,0,.2,1),box-shadow .15s cubic-bezier(.4,0,.2,1);
+    }
+
+    .description {
+    }
+
+  }
+}
+
+.status {
+  font-size: .75em;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+
+  &.available {
+    background-color: green;
+  }
+
+  &.unavailable {
+    background-color: red;
+  }
+}
+
+.badge {
+  height: 20px;
+  color: white;
+
+  &.available {
+    background-color: green;
+  }
+
+  &.unavailable {
+    background-color: red;
+  }
+
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  display: inline-block;
+
+  &.target {
+    background: white url('../img/target.png') center no-repeat;
+  }
+
+  &.bestbuy {
+    background: white url('../img/bestbuy.png') center no-repeat;
+  }
+
+  &.toysrus {
+    background: white url('../img/toysrus.png') center no-repeat;
+  }
+
 }
